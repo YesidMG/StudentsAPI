@@ -6,11 +6,11 @@ Este proyecto es una API REST para gestionar estudiantes, desarrollada con **Nod
 
 1. Clonar el repositorio:
 
-git clone https://github.com/tu-usuario/tu-repositorio.git
+git clone https://github.com/YesidMG/StudentsAPI.git
 
 2. Ubiquese en la carpeta del proyecto clonado
 
-cd ~/students
+cd ~/StudentsAPI
 
 (~ significa el resto de la ruta que tendras que poner en dado caso que lo alojes en una ruta especifica de tu pc)
 
@@ -49,7 +49,7 @@ Cambie 5432 por un puerto libre. Ejemplo 5444:5432
 
 1. Ubiquese en la carpeta del proyecto clonado
 
-cd ~/students
+cd ~/StudentsAPI
 
 (~ significa el resto de la ruta que tendras que poner en dado caso que lo alojes en una ruta especifica de tu pc)
 
