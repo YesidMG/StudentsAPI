@@ -17,6 +17,24 @@ app.get("/students", async (req, res) => {
     }
 });
 
+// Actualizar un estudiante por ID
+app.put("/students/:id", async (req, res) => {
+    try {
+        const { id } = req.params;
+        const { nombre, edad, carrera } = req.body;
+        const result = await pool.query(
+            "UPDATE students SET nombre = $1, edad = $2, carrera = $3 WHERE id = $4",
+            [nombre, edad, carrera, id]
+        );
+        if (result.rowCount === 0) {
+            return res.status(404).json({ message: "Estudiante no encontrado" });
+        }
+        res.json({ message: "Estudiante actualizado" });
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
+});
+
 // Obtener un estudiante por ID
 app.get("/students/:id", async (req, res) => {
     try {
